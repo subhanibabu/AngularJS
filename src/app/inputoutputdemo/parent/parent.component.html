@@ -1,0 +1,13 @@
+<p>
+  parent works!
+</p>
+
+<div *ngFor="let document of documents">
+  {{document.privacy}}
+  {{document.author}}
+  <app-child
+    [childVariable] = parentVariable
+    [privacy] = document.privacy
+    [author] = document
+  ></app-child>
+</div>
